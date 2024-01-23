@@ -37,6 +37,10 @@ jobs:
               uses: hashicorp/setup-terraform@v2
                 # with:
                     # terraform_version: "1.6.3"
+              with:
+                cli_config_credentials_hostname: app.terraform.io
+                terraform_version: "1.6.3"
+                  # terraform_wrapper: true
 
             - name: Terraform Init
               id: init
@@ -59,4 +63,3 @@ jobs:
             - name: Terraform plan status
               if: steps.plan.outcome == 'failure'
               run: exit 1
-              # test
