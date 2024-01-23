@@ -1,8 +1,28 @@
 name: Test Actions
-on: workflow_dispatch
+on: 
+  push: 
+    branches: 
+      - stage
+  pull_request:
+    branches: 
+      - main
+    paths:
+      - .github/workflows/test-actions.yml
 jobs:
   Testing:
     runs-on: ubuntu-latest
     steps:
       - name: Testing workflow
         run: echo "Workflow works!"
+
+
+
+        # on:
+          # push:
+            # branches:
+              # - "YOUR-TEST-BRANCH"
+          # pull_request:
+            # branches:
+              # - "main" 
+            # paths:
+              # - ".github/workflows/test.yaml"
