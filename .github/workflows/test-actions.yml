@@ -6,6 +6,7 @@ on:
       - stage
     paths: 
       - .github/workflows/test-actions.yml
+      
   pull_request:
     branches: 
       - main
