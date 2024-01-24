@@ -18,15 +18,3 @@ jobs:
     steps:
       - name: Testing workflow
         run: echo "Workflow works!"
-
-
-
-        # on:
-          # push:
-            # branches:
-              # - "YOUR-TEST-BRANCH"
-          # pull_request:
-            # branches:
-              # - "main" 
-            # paths:
-              # - ".github/workflows/test.yaml"
