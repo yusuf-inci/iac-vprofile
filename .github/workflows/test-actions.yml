@@ -1,20 +1,20 @@
-# name: Test Actions
-# on: 
-#   push: 
-#     branches:
-#       - main 
-#       - stage
-#     paths: 
-#       - .github/workflows/test-actions.yml
+name: Test Actions
+on: 
+  push: 
+    branches:
+      - main 
+      - stage
+    paths: 
+      - .github/workflows/test-actions.yml
       
-#   pull_request:
-#     branches: 
-#       - main
-#     paths:
-#       - .github/workflows/test-actions.yml
-# jobs:
-#   Testing:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Testing workflow
-#         run: echo "Workflow works!"
+  pull_request:
+    branches: 
+      - main
+    paths:
+      - .github/workflows/test-actions.yml
+jobs:
+  Testing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Testing workflow
+        run: echo "Workflow works!"
