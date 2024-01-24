@@ -64,11 +64,7 @@ jobs:
               if: steps.plan.outcome == 'failure'
               run: exit 1
             
-            # once you decide to create infrastructure then comment "Test Terraform Apply" and comment out other steps below
-            # - name: Test Terraform Apply
-              # if: github.ref == 'ref/heads/main' && github.event_name == 'push'
-              # run: echo "Terraform Apply passed the test"
-
+            # Once you decide to create infrastructure then comment "Test Terraform Apply" and comment out other steps below and add trigger event
             - name: Test Terraform Apply
               if: github.event_name == 'push' && github.ref == 'refs/heads/main' ||
                   github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true && github.ref == 'refs/heads/main'
